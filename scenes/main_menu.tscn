@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://fod3i1il1tab"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_h8b40"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rvmcf"]
+font_size = 30
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 338.0
+offset_top = 183.0
+offset_right = 835.0
+offset_bottom = 248.0
+script = ExtResource("1_h8b40")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 42.0
+grow_horizontal = 2
+text = "A game about life or smth"
+label_settings = SubResource("LabelSettings_rvmcf")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.237
+anchor_top = 1.738
+anchor_right = 0.801
+anchor_bottom = 3.831
+offset_left = 0.210991
+offset_top = -7.97
+offset_right = -6.09702
+offset_bottom = -0.0149994
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start"
+
+[node name="OptionsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 297.0
+offset_right = 392.0
+offset_bottom = 417.0
+text = "Button"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 118.0
+offset_top = 473.0
+offset_right = 392.0
+offset_bottom = 593.0
+text = "Quit
+"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
